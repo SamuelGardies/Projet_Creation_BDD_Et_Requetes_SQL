@@ -118,11 +118,8 @@ db.Produits.aggregate({
       }
     ]
   }
-})
-
--- Initialement nous avions utilisé $unset pour supprimer de l'affichage les champs inutiles mais la version de mongo DB du serveur de l'université ne semble pas le reconnaitre --
-
-,{
+},
+{
   $unset: [
     "ChaussureProposeLorsDeBonneAnnee2022._id",
     "ChaussureProposeLorsDeBonneAnnee2022.dateDebutOp",
