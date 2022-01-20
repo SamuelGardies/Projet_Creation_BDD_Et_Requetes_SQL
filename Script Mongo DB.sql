@@ -93,9 +93,7 @@ db.Operations.insert ([{_id : "o1",
 ---------------------------------------------------------------------------------
 ------------------------------ Requetes MongoDB ---------------------------------
 
--- a. Afficher les produits (nom, taille, couleur, prix promotionnel) de la catégorie
-« Chaussures » proposés lors de l’opération promotionnelle « Bonne année
-2022 ». --
+-- a. Afficher les produits (nom, taille, couleur, prix promotionnel) de la catégorie « Chaussures » proposés lors de l’opération promotionnelle « Bonne année 2022 ». --
 
 db.Produits.aggregate({
   $lookup: {
@@ -122,8 +120,7 @@ db.Produits.aggregate({
   }
 })
 
--- Initialement nous avions utilisé $unset pour supprimer de l'affichage les champs inutiles
-mais la version de mongo DB du serveur de l'université ne semble pas le reconnaitre --
+-- Initialement nous avions utilisé $unset pour supprimer de l'affichage les champs inutiles mais la version de mongo DB du serveur de l'université ne semble pas le reconnaitre --
 
 ,{
   $unset: [
